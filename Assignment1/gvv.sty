@@ -15,12 +15,12 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 
-%\lstset{
+\lstset{
 %language=C,
-%frame=single, 
-%breaklines=true,
-%columns=fullflexible
-%}
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
 %\lstset{
 %language=tex,
 %frame=single, 
@@ -49,6 +49,7 @@
 \providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\cond}[2]{#1\middle|#2}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\ztransform}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
 \newenvironment{amatrix}[1]{%
   \left(\begin{array}{@{}*{#1}{c}|c@{}}
 }{%
@@ -92,7 +93,7 @@
 %\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 
-\NewDocumentCommand{\system}{ss}{%
+\NewDocumentCommand{\system}{gg}{%
   \IfNoValueTF{#1}
     {%
  \longleftrightarrow
