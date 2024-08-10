@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.7)  10 AUG 2024 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.7)  10 AUG 2024 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,16 +1019,6 @@ tex
 ) (/usr/share/texlive/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.tex
 2022/01/19 4.03 tkz-obj-eu-triangles.tex
 )) (./gvv.sty
-
-! LaTeX cmd Error: Invalid argument type 'g' in command '\system' (requires
-(cmd)              xparse).
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.110 }
-       
-? 
 \c@matchleft=\count331
 \c@matchright=\count332
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
@@ -1379,10 +1369,10 @@ Package rerunfilecheck Info: File `int.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29766 strings out of 478287
- 587181 string characters out of 5849290
- 860084 words of memory out of 5000000
- 47327 multiletter control sequences out of 15000+600000
+ 29767 strings out of 478287
+ 587192 string characters out of 5849290
+ 859899 words of memory out of 5000000
+ 47328 multiletter control sequences out of 15000+600000
  527850 words of font info for 143 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,7n,96p,407b,717s stack positions out of 5000i,500n,10000p,200000b,80000s
