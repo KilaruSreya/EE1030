@@ -1,0 +1,118 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{multicol}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{16-30}
+\author{AI24BTECH11018 - Sreya}
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[1.] Let $\overrightarrow{a}=\hat{i}+\hat{j}+2\hat{k}$, $\overrightarrow{b}=2\hat{i}-3\Hat{j}+\hat{k}$ and $\overrightarrow{c}=hat{i}-\hat{j}+\hat{k}$ be three given vectors. Let $\overrightarrow{v}$ be a vector in the plane of $\overrightarrow{a}$ and $\overrightarrow{b}$ whose projection on $\overrightarrow{c}$ is $\frac{2}{\sqrt{3}}$. If $\overrightarrow{v}\cdot\hat{j}=7$, then$\overrightarrow{v}\cdot\brak{\hat{i}+\hat{k}}$ is equal to :
+    \begin{enumerate}
+        \item 6
+        \item 7
+        \item 8
+        \item 9
+    \end{enumerate}
+    \item[2.] The mean and standard deviation of 50 observations are 15 and 2 respectively. It was found that one incorrect observation was taken such that the sum of correct and incorrect observation is 70.If the correct mean is 16, then the correct variance is equal to :
+    \begin{enumerate}
+        \item 10
+        \item 36
+        \item 43
+        \item 60
+    \end{enumerate}
+    \item[3.] $16\sin{\brak{20^\circ}}\sin{\brak{40^\circ}}\sin{\brak{80^\circ}}$ is equal to :
+    \begin{enumerate}
+        \item $\sqrt{3}$
+        \item $2\sqrt{3}$
+        \item $3$
+        \item $4\sqrt{3}$
+    \end{enumerate}
+    \item[4.] If the inverse trignometric functions take principal values, then $\cos^{-1}\brak{\frac{3}{10}\cos\brak{\tan^{-1}\brak{\frac{4}{3}}}+\frac{2}{5}\sin\brak{\tan^{-1}\brak{\frac{4}{3}}}}$ is equal to :
+    \begin{enumerate}
+        \item 0
+        \item $\frac{\pi}{4}$
+        \item $\frac{\pi}{3}$
+        \item $\frac{\pi}{6}$
+    \end{enumerate}
+    \item[5.] Let $r \in {p,q,\neg p,\neg q}$ be such that the logical statement $r\lor \brak{\neg p}\implies\brak{p\land q}\lor r$ is a tautology.Then 'r' is equal to :
+    \begin{enumerate}
+        \item p
+        \item q
+        \item $\neg p$
+        \item $\neg q$
+    \end{enumerate}
+    \item[6.] $f: \mathbb{R} \to \mathbb{R}$ satisfy $f\brak{x+y}=2^xf\brak{y}+4^yf\brak{x}$,$\forall x$,  $y \in \mathbb{R}$.If $f\brak{2}=3$, then $14\cdot \frac{f^{\prime}\brak{4}}{f^{\prime}\brak{2}}$ is equal to 
+    \item[7.] Let $p$ and $q$ be two real numbers such tht $p+q=3$
+and $p^4+q^4=369$. Then $\brak{\frac{1}{p}+\frac{1}{q}}^{-2}$ is equal to 
+\item[8.] if $z^2+z+1=0$, $z \in \mathbb{C}$, then $\abs{\sum_{n=1}^{15}\brak{Z^n+{\brak{-1}^n\frac{1}{Z^n}}}^2}$ is equal to 
+\item[9.] Let $\mathbf{X} = \begin{pmatrix}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{pmatrix}$ ,$Y=\alpha I+\beta X+\gamma X^2$ and $Z={\alpha^2}I-\alpha \beta X+\brak{{\beta^2}-\alpha \gamma}X^2,\alpha ,\beta ,\gamma \in \mathbb{R}$. if $\mathbf{Y^-1} = \begin{pmatrix}
+\frac{1}{5} & \frac{-2}{5} & \frac{1}{5} \\
+0 & \frac{1}{5} & \frac{-2}{5} \\
+0 & 0 & \frac{1}{5}
+\end{pmatrix}$ then $\brak{\alpha -\beta +\gamma}^2$ is equal to 
+\item[10.] The total number of $3-digit$ numbers, whose greatest coomon divisor with 36 is 2, is 
+\item[11.] $\brak{\mathrm{40C_0}}+\brak{\mathrm{41C_1}}+\brak{\mathrm{42C_2}}+\cdots +\brak{\mathrm{60C_{20}}}=\frac{m}{n}\mathrm{60C_{20}}$
+\item[12.] if $a_1$\brak{\textgreater 0},$a_2,a_3,a_4,a_5$ are in a $G\cdot P\cdot ,a_2+a_4=2a_3+1$ and $3a_2+a_3=2a_4$, then $a_2+a_4+2a_5$ is equal to 
+\item[13.] The integral $\frac{24}{\pi}\int_{0}^{\sqrt{2}}\frac{\brak{2-x^2}}{\brak{2+x^2}\brak{\sqrt{4+x^4}}}$ is equal to 
+\item[14.] Let a line $L_1$ be tangent to the hyperbola $\frac{x^2}{16}-\frac{y^2}{4}=1$ and let $L_2$ be the line passing through the orgin and perpendicular to $L_1$. If the locus of the point of intersection of $L_1$ and $L_2$ is $\brak{x^2+y^2}^2=\alpha x^2+\beta y^2$, then $\alpha + \beta $ is equal to 
+\item[15.] If the probability that a randomly chosen $6-digit$ number formed by using digits 1 and 8 only is a multiple of 21 is $p$, then $96 p$ is equal to 
+\end{enumerate}
+
+\end{document}\
