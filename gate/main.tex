@@ -1,0 +1,561 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}  % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{circuitikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2008-EE- 69-88}
+\author{AI24BTECH11018 - Sreya}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\begin{enumerate}
+\setcounter{enumi}{68}
+\item Two sinusoidal signals $p\brak{w_1t}=A$ and $q\brak{w_2t}$ are applied to $X$ and $Y$ inputs of a dual channel.$CRO$. The Lissajous figure displayed on the screen is shown below :\\
+\begin{tikzpicture}[scale=2]
+
+    % Axes
+    \draw[thick,->] (-2,0) -- (2,0) node[anchor=north] {$x$};
+    \draw[thick,->] (0,-2) -- (0,2) node[anchor=west] {$y$};
+
+    % Main Ellipses representing the Lissajous figure (touching at the origin)
+    \draw[thick] (0,0.5) ellipse (1 and 0.5);
+    \draw[thick] (0,-0.5) ellipse (1 and 0.5);
+
+    % Small elliptical arrows showing direction of motion
+    \draw[-stealth] (0.5,0.95) arc[start angle=40, end angle=10, radius=0.2];
+    \draw[-stealth] (-0.5,0.95) arc[start angle=40, end angle=10, radius=0.2];
+    \draw[-stealth] (0.5,-0.90) arc[start angle=25, end angle=35, radius=0.4];
+    \draw[-stealth] (-0.5,-0.95) arc[start angle=65, end angle=45, radius=0.2];
+    \end{tikzpicture}
+    
+    The signal $q\brak{w_2t}$ will be represted as
+    \begin{enumerate}
+        \item $q\brak{w_2t}=A\sin w_2t$, $w_2=2w_1$
+        \item $q\brak{w_2t}=A\sin w_2t$ , $w_2=\frac{w_1}{2}$
+        \item $q\brak{w_2t}=A\cos w_2t$, $w_2=2w_1$
+        \item $q\brak{w_2t}=A\cos w_2t=A\cos w_2t$ ,$w_2=\frac{w_1}{2}$
+        \end{enumerate}
+        \item The $ac$ bridge shown in the figure is used to measure the impendence $Z$\\
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large]
+\draw [line width=0.6pt](4.25,12.75) to[R,l={ \large $500\Omega$}] (0,8.5);
+\draw [line width=0.6pt](4.25,12.75) to[curved capacitor] (6.75,10.25);
+\draw [line width=0.6pt](6.5,10.5) to[R,l={ \large $300\Omega$}] (8.5,8.5);
+\draw [line width=0.6pt](0,8.5) to[rmeter, t=A] (8.75,8.5);
+\draw [line width=0.6pt](8.25,8.5) to[european resistor,l={ \large $z$}] (4.25,4.5);
+\draw [line width=0.6pt](0,8.5) to[L,l={ \large $15.91mH$}] (2.25,6.25);
+\draw [line width=0.6pt](2.25,6.25) to[R,l={ \large $300\Omega$}] (4.25,4.25);
+\node [font=\large] at (6.5,12) {$0.398 mF$};
+\draw [line width=0.6pt](4.25,4.25) to[short] (-4.25,4.25);
+\draw [line width=0.6pt](4.5,12.75) to[short] (-5,12.75);
+\draw [line width=0.6pt](-4.5,13) to[sinusoidal voltage source, l={ \Large $Oscillator$}] (-4.5,4.25);
+\end{circuitikz}
+} % End of resizebox
+\caption{Circuit diagram with sinusoidal voltage source}
+\end{figure}
+\\\\\\\\
+\begin{enumerate}
+    \item \brak{260+j0}$\Omega$
+    \item \brak{0+j200}$\Omega$
+    \item \brak{260-j200}$\Omega$
+    \item \brak{260+j200}$\Omega$
+\end{enumerate} 
+
+  \textbf{Common Data Questions} \\
+\textbf{Common Data for Questions $71$, $72$ and $73$:}\\
+    Consider a power system shown below:
+    
+
+    \begin{circuitikz}
+    % Voltage sources
+    \draw (0,0) to[sinusoidal voltage source, l=$V_{s1}$] (0,2);
+    \draw (10,0) to[sinusoidal voltage source, l=$V_{s2}$] (10,2);
+
+    % Impedance Zs1
+    \draw (0,2) to[L, l=$Z_{s1}$] (2,2);
+
+    % Node X
+    \draw (2,2) -- (2,2.5) node[above] {X};
+
+    % Current Ix arrow
+    \draw[->] (2.5,1.8) -- (4,1.8) node[midway, below] {$I_X$};
+
+    % Impedance ZL with arrows
+    \draw (2,2) -- (8,2);
+    \node at (5,2.3) {$Z_L$};
+    \draw[->] (3.5,2.2) -- (4.5,2.2);
+    \draw[->] (6.5,2.2) -- (5.5,2.2);
+
+    % Node Y
+    \draw (8,2) -- (8,2.5) node[above] {Y};
+
+    % Impedance Zs2
+    \draw (8,2) to[L, l=$Z_{s2}$] (10,2);
+
+    % Fault at point F
+    \draw (6,2) -- (6,1.5) node[below] {F};
+    \draw (6,1.5) -- (5.7,1) -- (6.3,1) -- cycle; % triangle to represent fault
+
+    % Fault current If arrow, positioned lower
+    \draw[->] (6,0.9) -- (6,0.3) node[right] {$I_F$};
+
+\end{circuitikz}
+given that :\\\\
+$V{s1}=V{s2}=1.0+j0.0pu:$\\\\
+The positive sequence impendances $Z_{s1}=Z_{s2}=0.001+j0.001pu$ and $Z_L=0.006+j0.06pu$.\\\\
+3-phase Base $MVA=100$\\\\
+Voltage $base=400kV$ \brak{Line to Line}\\\\
+Nominal system $frequency=50 Hz$\\\\
+reference voltage for phase $'a'$ is defined as $v\brak{t}=V_m\cos\brak{\omega t}$\\
+symmetrical three phase fault occurs at centre of the line, i.e. point $\prime F$ at time to. The positive sequence impedance from source $S_1$, to point $F$ equals $0.004+ j0.04 pu$. The waveform corresponding to phase $a$ fault current from bus $X$ reveals that decaying de offset current is negative and in magnitude at its maximum initial value. Assume that the negative sequence impedances are equal to positive sequence impedances, and the zero sequence impedances are three times positive sequence impedances.\\\\
+
+\item The instant $\brak{t_0}$ of the fault will be 
+\begin{enumerate}
+    \item $4.682 ms$
+    \item $9.667 ms$
+    \item $14.667 ms$
+    \item $19.667 ms$
+\end{enumerate}
+\item The rms value of the component of fault current $I_X$ will be 
+\begin{enumerate}
+    \item $3.59kA$ 
+    \item $5.07kA$
+    \item $7.18kA$
+    \item $10.15kA$
+\end{enumerate}
+\item Instead of the three phase fault, if a single line to ground fault occurs on phase $'a'$ at point $F$ with zero fault impedance, then the rms value of the ac component of fault current $\brak{I_x}$ for phase $'a'$ will be
+\begin{enumerate}
+    \item $4.97 pu$
+    \item $7.0 pu$
+    \item $14.93 pu$
+    \item $29.85 pu$
+\end{enumerate}
+ \textbf{Common Data for $74$ and $75$:}\\\\
+$3-phase$, $440 V$, $50 Hz$, $4-pole$, slip ring induction motor is fed from the rotor side through an auto- transformer and the stator is connected to a variable resistance as shown in the figure.\\\\\\\\\\\\\\\\
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (3.75,9) rectangle (7,7.25);
+\draw (7,8.5) to[short] (9.25,8.5);
+\draw (7,8.25) to[short] (9.25,8.25);
+\draw [ line width=0.5pt ] (10,8.5) circle (0.75cm);
+\draw [ line width=0.5pt ] (9.75,9.5) rectangle (10.25,9.25);
+\draw [ line width=0.5pt ] (9.75,7.75) rectangle (10.25,7.5);
+\draw [ line width=0.5pt](4.75,11) to[short] (4.75,9);
+\draw [ line width=0.5pt](5,10.5) to[short] (5,9);
+\draw [ line width=0.5pt](5.25,10) to[short] (5.25,9);
+\draw [ line width=0.5pt](4.75,11) to[R] (7.75,11);
+\draw [ line width=0.5pt](5,10.5) to[R] (7.75,10.5);
+\draw [ line width=0.5pt](5.25,10) to[R] (7.75,10);
+\draw [ line width=0.5pt](7.75,11) to[short] (7.75,10);
+\draw [line width=0.5pt, ->, >=Stealth] (6,9.75) -- (6.75,11.5);
+\draw [ line width=0.5pt](10,9.5) to[short] (10,10);
+\draw [ line width=0.5pt](10,7.5) to[short] (10,7);
+\draw [ line width=0.5pt](10,10) to[short] (12,10);
+\draw [ line width=0.5pt](10,7) to[short] (12,7);
+\draw [ line width=0.5pt](12,10) to[R] (12,7);
+\draw [ line width=0.5pt ] (8,8.75) rectangle (8.25,8);
+\draw [ line width=0.5pt ] (1.25,8.5) rectangle (3.75,8.25);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (8,8.75) rectangle (8.25,8.25);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (8,8.25) rectangle (8.25,8);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (1.75,8.75) rectangle (2,8);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (2.25,8.75) rectangle (2.5,8);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (2.75,8.75) rectangle (3,8);
+\draw [ line width=0.5pt](3,8) to[short] (3,6.5);
+\draw [ line width=0.5pt](2.5,8) to[short] (2.5,7);
+\draw [ line width=0.5pt](2,8) to[short] (2,7.5);
+\draw [ line width=0.5pt](3,6.5) to[short] (1.25,6.5);
+\draw [ line width=0.5pt](2,7.5) to[short] (1.25,7.5);
+\draw [ line width=0.5pt](2.5,7) to[short] (1.25,7);
+\draw [ line width=0.5pt ] (0.75,7.75) rectangle (1.25,6.25);
+\draw [ line width=0.5pt](0.75,7.5) to[short] (0.25,7.5);
+\draw [ line width=0.5pt](0.75,7) to[short] (0.25,7);
+\draw [ line width=0.5pt](0.75,6.5) to[short] (0.25,6.5);
+\draw [ fill={rgb,255:red,119; green,118; blue,123} , line width=0.5pt ] (4.5,7.25) rectangle (6.25,7);
+\draw [line width=0.5pt, short] (4.5,7) -- (4.25,6.75);
+\draw [line width=0.5pt, short] (6.25,7) -- (6.5,6.75);
+\draw [ line width=0.5pt](4.25,6.75) to[short] (6.5,6.75);
+\node [font=\small] at (5.25,8.25) {Induction monitor};
+\node [font=\small] at (11.5,8.5) {R};
+\draw [line width=0.5pt](8.75,5.75) to[L ] (10.75,5.75);
+\draw [ line width=0.5pt](8.75,5.75) to[short, -o] (8.75,5.25) ;
+\draw [ line width=0.5pt](10.75,5.75) to[short, -o] (10.75,5.25) ;
+\node [font=\small] at (9.75,5) {220 V};
+\node [font=\small] at (1.25,6) {Auto Transformer};
+\node [font=\small] at (8.75,5) {+};
+\node [font=\small] at (10.75,5) {-};
+\node [font=\small] at (-0.75,7.5) {3-phase,};
+\node [font=\small] at (-0.75,7) {50Hz,supply};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+The motor is coupled to a $220 V$, separately excited, dc generator feeding power to fixed resistance of $10\Omega$. Two-wattmeter method is used to measure the input power to induction motor. The variable resistance is adjusted such that the motor runs at $1410 rpm$ and the following readings were recorded:\\
+$w_1=1800w$, $w_2=-200w$\\
+\item The speed of rotation of stator feild with respectect to the structure will be 
+\begin{enumerate}
+    \item $90 rpm$ in the direction of rotation 
+    \item $90 rpm$in the opposite directios of rotation 
+    \item $1500 rpm$ in the direction of rotation 
+    \item $1500 rpm$ the opposite directios of rotation 
+\end{enumerate}
+\item Neglecting all losses of both the machines, the de generator power output and the current through resistance $R_{ex}$ will respectively be
+\begin{enumerate}
+    \item $96 W$,$3.10 A$
+    \item $120 W$, $3.46 A$
+    \item $1504W$,$12.26 A$
+    \item $1880W$,$13.71 A$
+\end{enumerate}
+\textbf{Linked Answers: Q.76 to Q85 carry two marks each}\\
+\textbf{Statement linked Answer Questions 76 and 77:}\\
+The current $i\brak{t}$ sketched in the figure through an intially uncharged $0.3 nF$ capacitor.
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (2.75,10.75) to[short] (2.75,7);
+\draw [ line width=0.7pt](2.75,7) to[short] (9,7);
+\draw [dashed] (3.25,10.75) -- (3.25,7);
+\draw [dashed] (4,10.75) -- (4,7);
+\draw [dashed] (4.5,10.75) -- (4.5,7);
+\draw [dashed] (5.25,10.75) -- (5.25,7);
+\draw [dashed] (5.75,10.75) -- (5.75,7);
+\draw [dashed] (6.5,10.75) -- (6.5,7);
+\draw [dashed] (7.25,10.75) -- (7.25,7);
+\draw [dashed] (7.75,10.75) -- (7.75,7);
+\draw [dashed] (8.5,10.75) -- (8.5,7);
+\draw [dashed] (2.75,7.5) -- (8.5,7.5);
+\draw [dashed] (2.75,8) -- (8.5,8);
+\draw [dashed] (2.75,8.5) -- (8.75,8.5);
+\draw [dashed] (2.75,9) -- (8.75,9);
+\draw [dashed] (2.75,9.5) -- (8.75,9.5);
+\draw [dashed] (2.75,10) -- (8.5,10);
+\node [font=\small] at (2.75,6.75) {0};
+\node [font=\small] at (3.25,6.75) {1};
+\draw [line width=0.6pt, short] (4,9) -- (2.75,7);
+\draw [line width=0.6pt, short] (4,9) -- (7.75,7);
+\draw [line width=0.6pt, ->, >=Stealth] (4.25,6.25) -- (6.75,6.25);
+\draw [line width=0.6pt, ->, >=Stealth] (1.75,7.5) -- (1.75,9.5);
+\node [font=\small] at (4,6.75) {2};
+\node [font=\small] at (4.5,6.75) {3};
+\node [font=\small] at (5.25,6.75) {4};
+\node [font=\small] at (5.75,6.75) {5};
+\node [font=\small] at (6.5,6.75) {6};
+\node [font=\small] at (7.25,6.75) {7};
+\node [font=\small] at (7.75,6.75) {8};
+\node [font=\small] at (8.5,6.75) {9};
+\node [font=\small] at (2.5,7.5) {1};
+\node [font=\small] at (2.5,8) {2};
+\node [font=\small] at (2.5,8.5) {3};
+\node [font=\small] at (2.5,9) {4};
+\node [font=\small] at (2.5,9.5) {5};
+\node [font=\small] at (2.5,10) {6};
+\node [font=\small] at (1.75,9.75) {i(t) mA};
+\node [font=\small] at (7.25,6.25) {t(ms)};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}\\
+\item The charge stored in the capacitor at $t=5\mu s$ will be 
+\begin{enumerate}
+    \item $8 nC$
+    \item $10 nC$
+    \item $13 nC$
+    \item $16 nC$
+\end{enumerate}
+\item The capacitor charged upto $5\mu s$, as per the current profile given in the figure, is connected across an inductor of $0.6 mH$. Then the value of voltage across the capacitor after $1 \mu s$ will approximately be
+ \begin{enumerate}
+     \item $18.8 V$
+     \item $23.5 V$
+     \item $-23.5 V$
+     \item $-30.6V$
+ \end{enumerate}
+\textbf{Statement linked with Answer Questions 78 and 79:}
+\\
+The state space equation of a system described by \\
+\textbf{$x=Ax+Bu$}\\
+\textbf{$y=Cx$}\\
+where $x$ is a vector, $u$ is input, $y$ is output and $\begin{pmatrix}
+0 & 1 \\
+0 & -2
+\end{pmatrix}$   $\begin{pmatrix}
+0 \\
+1
+\end{pmatrix}$  $\begin{pmatrix}
+1 & 0
+\end{pmatrix}$.\\
+\item The transfer function $G\brak{s}$ of this system will be 
+\begin{enumerate}
+    \item $\frac{s}{\brak{s+2}}$
+    \item $\frac{s+1}{s\brak{s-2}}$ 
+    \item $\frac{s}{\brak{s-2}}$
+    \item $\frac{1}{s\brak{s+2}}$
+\end{enumerate}
+\item A unity feedback is provided to the above system $G\brak{s}$ to make it a closed loop as shown in figure.\\
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [ line width=0.6pt ] (3.25,8.5) circle (0.5cm);
+\draw [line width=0.6pt, ->, >=Stealth] (3.75,8.5) -- (5.5,8.5);
+\draw [ line width=0.6pt ] (5.5,9) rectangle (7.5,8.25);
+\draw [line width=0.6pt, ->, >=Stealth] (7.5,8.5) -- (10,8.5);
+\draw [line width=0.6pt, ->, >=Stealth] (3.25,7.25) -- (3.25,8);
+\draw [ line width=0.6pt](3.25,7.25) to[short] (9,7.25);
+\draw [ line width=0.6pt](9,7.25) to[short, -o] (9,8.5) ;
+\draw [line width=0.6pt, ->, >=Stealth] (1.75,8.5) -- (2.75,8.5);
+\node [font=\small] at (6.5,8.5) {G(s)};
+\node [font=\small] at (9.75,9) {y(t)};
+\node [font=\small] at (1.75,9) {r(t)};
+\node [font=\small] at (2.5,8.75) {+};
+\node [font=\large] at (3.5,7.75) {-};
+\node [font=\large] at (3.25,8.5) {$\sum$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}\\
+For a unit step $r\brak{t}$, the stedy state error in the output will be 
+\begin{enumerate}
+    \item $0$
+    \item $1$
+    \item $2$
+    \item $\infty$
+\end{enumerate} 
+\textbf{Statemet for Linked Answer Questions 80 and 81:}\\
+A general filter circuit is shown in the figure:\\
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [line width=0.6pt, short] (4.25,9.5) -- (4.25,7.75);
+\draw [line width=0.6pt, short] (4.25,9.5) -- (6.5,8.75);
+\draw [line width=0.6pt, short] (6.5,8.75) -- (4.25,7.75);
+\draw [ line width=0.6pt](6.5,8.75) to[short] (8.75,8.75);
+\draw [ line width=0.6pt](1,9) to[R] (4.25,9);
+\node at (1,9) [circ] {};
+\draw [ line width=0.6pt](4.25,8.25) to[R] (1,8.25);
+\draw [line width=0.6pt, short] (1,9) -- (1,8.25);
+\draw [line width=0.6pt, short] (1,9) -- (0.25,9);
+\draw [ line width=0.6pt](3.75,8.25) to[R] (3.75,6.25);
+
+\draw [line width=0.6pt](3.75,6.25) to (3.75,6) node[ground]{};
+\draw [ line width=0.6pt](3.75,10.75) to[short] (3.75,9);
+\draw [ line width=0.6pt](7,10.75) to[short] (7,8.75);
+\draw [line width=0.6pt](3.75,10) to[curved capacitor] (7,10);
+\draw [ line width=0.6pt](3.75,10.75) to[R] (7,10.75);
+\node [font=\small] at (2.75,9.5) {$R_1$};
+\node [font=\small] at (5.25,11.25) {$R_2$};
+\node [font=\small] at (2.75,7.75) {$R_3$};
+\node [font=\small] at (8.5,9) {$V_2$};
+\node [font=\normalsize] at (4.5,8.25) {+};
+\node [font=\normalsize] at (4.5,9) {-};
+\node [font=\normalsize] at (0.5,9.5) {$V_1$};
+\node [font=\normalsize] at (4.25,7.25) {$R_4$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\\\\
+\item if $R_1=R_2=R_A$ and $R_3=R_4=R_B$, the circuit acts as a
+\begin{enumerate}
+    \item all pass filter 
+    \item hand pass filter 
+    \item high pass filter 
+    \item low pass filter
+\end{enumerate}
+\item The output of the filter in $Q.80$ is given to the circuit shown in the figure: \\
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=0.6pt](3,9) to[R] (8,9);
+\node at (3,9) [circ] {};
+\node at (8,9) [circ] {};
+\draw [ line width=0.6pt](5.75,7.25) to[short, -o] (8,7.25) ;
+\draw [ line width=0.6pt](5.75,7.25) to[short, -o] (3,7.25) ;
+\draw [line width=0.6pt, ->, >=Stealth] (8,7.5) -- (8,8.5);
+\draw [line width=0.6pt, ->, >=Stealth] (3,7.5) -- (3,8.5);
+\draw [line width=0.6pt](7,9) to[curved capacitor] (7,7.25);
+\node at (7,9) [circ] {};
+\node at (7,7.25) [circ] {};
+\node [font=\normalsize] at (6.25,8.25) {$C$};
+\node [font=\normalsize] at (2.25,8) {$ $};
+\node [font=\normalsize] at (2.5,8.25) {$v_{in}$};
+\node [font=\normalsize] at (8.5,8.25) {$v_{o}$};
+\node [font=\normalsize] at (5.5,9.5) {$R_A/2$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+The gain vs frequency characteristic of the uotput $\brak{v_o}$ will be 
+\begin{enumerate}
+    \item \begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=0.6pt](2,10.5) to[short] (2,7.25);
+\draw [ line width=0.6pt](1.5,7.75) to[short] (6,7.75);
+\begin{scope}[rotate around={26.5:(4.25,9)}]
+\draw[domain=4.25:8.25,samples=100,smooth, line width=0.6pt] plot (\x,{1*sin(1*\x r -4.25 r ) +9});
+\end{scope}
+\begin{scope}[rotate around={-167.5:(4.25,9)}]
+\draw[domain=4.25:6.5,samples=100,smooth, line width=0.6pt] plot (\x,{1*sin(1*\x r -4.25 r ) +9});
+\end{scope}
+\draw [line width=0.6pt, short] (2,7.75) -- (3.5,7.75);
+\draw [line width=0.6pt, ->, >=Stealth] (4.5,7.25) -- (6.75,7.25);
+\draw [line width=0.6pt, ->, >=Stealth] (1.5,8.75) -- (1.5,10.25);
+\draw [line width=0.6pt, short] (6,7.75) -- (8.25,7.75);
+\node [font=\normalsize] at (1.25,8.5) {$Gain$};
+\node [font=\normalsize] at (4,7.25) {$\omega$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+  \item \begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=0.6pt](0,12.25) to[short] (0,6.75);
+\draw [ line width=0.6pt](-0.5,7.75) to[short] (6.5,7.75);
+\begin{scope}[rotate around={-39.75:(0,11.75)}]
+\draw[domain=0:7.75,samples=100,smooth, line width=0.6pt] plot (\x,{1*sin(1*\x r -0 r ) +11.75});
+\end{scope}
+\draw [line width=0.6pt, ->, >=Stealth] (4,7.25) -- (6.5,7.25);
+\draw [line width=0.6pt, ->, >=Stealth] (-0.5,10.25) -- (-0.5,12.25);
+\node [font=\normalsize] at (-0.75,9.75) {$Gain$};
+\node [font=\normalsize] at (3.5,7) {$\omega$};
+\node [font=\normalsize] at (-0.25,7.25) {$0$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+  \item \begin{tikzpicture}
+    % Draw the axes
+    \draw[->] (0,0) -- (6,0) node[right] {$\omega$};
+    \draw[->] (0,0) -- (0,3) node[above] {Gain};
+    
+    % Plot the curve that touches the x-axis
+    \draw[thick, domain=0:6, samples=100, smooth] 
+        plot (\x, {2 - 2 * exp(-(\x-3)^2)}) 
+        node[above right] {};
+
+    % Label for concentration (Cmin)
+    
+    
+\end{tikzpicture} 
+  \item \begin{tikzpicture}
+    % Draw the axes
+    \draw[->] (0,0) -- (6,0) node[right] {$\omega$};
+    \draw[->] (0,0) -- (0,3) node[above] {Gain};
+    
+    % Plot the curve with a peak
+    \draw[thick, domain=0:6, samples=100, smooth] 
+        plot (\x, {2 * exp(-(\x-3)^2)}) 
+        node[above right] {};
+
+    % Label for peak value of Gain
+    \node at (1,2.3) {Gain};
+    
+\end{tikzpicture} 
+\end{enumerate}
+
+ \textbf{Statement Linked Answer Questions 82 and 83:}\\
+A $240 v$ dc shunt motr draws $15 A$ while supplying the rated load at a speed of $80$ $\frac{rad}{s}$. The armature resistance is $0.5 \Omega$ and the feild winding resistance is $80 \Omega$.\\
+\item The net voltage across the armature at the plugging will be 
+\begin{enumerate}
+    \item $6 V$ 
+    \item $234 V$
+    \item $240 V$
+    \item $474 V$
+\end{enumerate}
+\item The capacitor charged upto $5$ us, as per the current profile given in the figure, is connected across an inductor of $0.6 mH$. Then the value of voltage across the capacitor after $1$ us will approximately be
+\begin{enumerate}
+    \item $31.1\Omega$
+    \item $31.9\Omega$
+    \item $15.1\Omega$
+    \item $15.9\Omega$
+\end{enumerate}
+\item A synchronous motor is connected to an infinite bus at $1.0 pu$ voltage and draws $0.6 pu$ current at unity power factor. Its synchronous reactance is $1.0 pu$ and resistance is negligible.
+\begin{enumerate}
+    \item $0.8 pu$ and $36.86^o$ lag
+    \item $0.8 pu$ and $36.86^o$ lead
+    \item $1.17 pu$ and $30.96^o$ lead
+    \item $1.17 pu$ and $30.96^o$ lag
+\end{enumerate}
+\item Keeping the excitation voltage same, the load on the motor is increased such that the motor current increases by $20$ percent. The operating power factor will become
+\begin{enumerate}
+    \item $0.995$ lagging 
+    \item $0.995$ leading
+    \item $0.791$ lagging
+    \item $0.848$ leading
+\end{enumerate}
+ \end{enumerate}
+\end{document}
