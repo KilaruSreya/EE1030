@@ -1,3 +1,0 @@
-Vector BA (2a): (2.00, 1.00)
-Vector BC (3b): (3.00, 2.00)
-Vector AC: (1.00, 1.00)
