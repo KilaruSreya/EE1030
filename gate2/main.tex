@@ -1,1 +1,285 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
 
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}  % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{circuitikz}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2021-MA- 14-26}
+\author{AI24BTECH11018 - Sreya}
+
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\begin{enumerate}
+\setcounter{enumi}{13}
+\item The geometric mean radius of a conductor having four equal strands with each strand $r$, as shown in the figure below, is
+\begin{figure}[!ht]
+\centering
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\scriptsize]
+\draw  (4,10) circle (0.5cm);
+\draw  (5,10) circle (0.5cm);
+\draw  (4,9) circle (0.5cm);
+\draw  (5,9) circle (0.5cm);
+\node at (4,10) [circ] {};
+\draw [->, >=Stealth] (4,10) -- (4.25,10.5);
+\node [font=\scriptsize] at (4,10.25) {r};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $4 r$ 
+    \item $1.414 r$
+    \item $2 r$
+    \item $1.723 r$
+\end{enumerate}
+\item THe valid positive, negitive and zero sequence in $\brak{in p\cdot u}$,respectively for a $220 kV$ fully transposed three-phase transmission line, from the given choices are
+\begin{enumerate}
+    \item $1.1,0.15$ and $0.08$
+    \item $0.15,0.15$ and $0.35$
+    \item $0.2,0.2$ and $0.2$
+    \item $0.1,0.3$ and $0.1$
+\end{enumerate}
+\item The steady state output $\brak{V_out}$ of the circuit shown below, will
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+
+\draw (5.5,9) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (4,8.5);
+\draw  (opamp2.-) to[short] (4,9.5);
+\draw (6.7,9) to[short](7,9);
+\draw (7,9) to[short, -o] (8,9) ;
+\draw (4,8.5) to[R] (4,6.25);
+\draw (4,6.5) to (4,6.25) node[ground]{};
+\draw (4,9.5) to[R] (2,9.5);
+\draw (2,9.5) to[american voltage source] (2,6.75);
+\draw (2,6.75) to (2,6.25) node[ground]{};
+\draw [short] (4,9.5) -- (4,10.75);
+\draw [short] (6.75,9) -- (6.75,10.75);
+\draw (6.75,10.75) to[C,l={ \small $V_{DD}$}] (4,10.75);
+\draw [short] (5.5,9.5) -- (5.5,10);
+\draw [short] (5.5,8.5) -- (5.5,7.75);
+\node [font=\small] at (1.25,8.25) {0.1 V};
+\node [font=\small] at (3,10) {$R_1$};
+\node [font=\small] at (4.5,7.25) {$R_2$};
+\node [font=\small] at (5.5,7.5) {$-V_{EE}$};
+\node [font=\small] at (8,8.75) {$V_{out}$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item saturate to $+V_{DD}$
+    \item saturate to $-V_{EE}$
+    \item becomes equal to $0.1 V$
+    \item becomes equal to $-0.1 V$
+\end{enumerate}
+\item The Body magnitude plot of a first order stable system is constant with frequency. The asymptotic value of high frequency phase,for the system is $-180\circ$. This system has
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+
+\draw [<->, >=Stealth] (2.5,10) -- (2.5,6.5);
+\draw (2.5,9.25) to[short] (5.5,9.25);
+\draw [short] (2.5,8.25) -- (3,8);
+\draw [short] (3,8) -- (3.5,7.25);
+\draw [short] (3.5,7.25) -- (5.5,7.25);
+\node [font=\small] at (3.5,9.5) {magnitude};
+\draw [->, >=Stealth] (2.5,8.25) -- (5.5,8.25)node[pos=0.5, fill=white]{log(f)};
+\node [font=\small] at (4.5,7) {phase};
+\node [font=\small] at (2,7.25) {-180$\circ$};
+\node [font=\small] at (2.25,8.25) {0$\circ$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item one LHP pole one RHP zero at the same frequency  
+    \item one LHP pole one LHP zero at the same frequency
+    \item two LHP poles and one RHP zero.
+    \item two RHP poles and one LHP zero
+\end{enumerate}
+\item A balanced wheatstone bridge has the following arm resistance:\\
+$R_{AB}=1K\Omega \pm 2.1$ percent; $R_{BC}=100\Omega \pm 0.5$ percent; $R_{CD}$ is a unknown resistance; $R_{DA}=300\Omega \pm 0.4$ percent. The value of $R_{CD}$ and its accuracy is 
+\begin{enumerate}
+    \item $30\Omega \pm 3\Omega$
+    \item $30\Omega \pm 0.9\Omega$
+    \item $3000\Omega \pm 90\Omega$
+    \item $3000\Omega \pm 3\Omega$
+\end{enumerate}
+\item The open loop transfer function of a unity gain negive feedback system is given by $G\brak{s}=\frac{k}{s^2+4s-5}$.The of $K$ for which the system is stable, is 
+\begin{enumerate}
+    \item $k\textgreater 3$
+    \item $k\textless 3$
+    \item $k\textgreater 5$
+    \item $k\textless 5$
+\end{enumerate}
+\item Consider a $3 \times 3$ matrix whose \brak{i,j}-th element $a_{i,j}=\brak{i-j}^2$.Then the matrix $A$ will be 
+\begin{enumerate}
+    \item symmetric
+    \item skew-symmetric
+    \item unitary
+    \item null.
+\end{enumerate}
+\item In the circuit shown below, a three phase star-connected unbalanced load is connected to a balanced three-phase supply of $100\sqrt{3}V$ with phase sequnce $ABC$. the star the voltage differnce across the nodes $n$ and $n\prime$ is zero is  \\\\\\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw [ line width=0.5pt](3,7.25) to[short] (10.25,7.25);
+\draw [line width=0.5pt, short] (3,8) -- (3,7.25);
+\draw [line width=0.5pt, short] (10.25,8) -- (10.25,7.25);
+\draw [ line width=0.5pt](3,8) to[sinusoidal voltage source, sources/symbol/rotate=auto] (4.25,9.25);
+\node at (4.25,9.25) [circ] {};
+\draw [ line width=0.5pt](4.25,9.25) to[sinusoidal voltage source, sources/symbol/rotate=auto] (5.25,8.25);
+\draw [line width=0.5pt, short] (5.25,8.25) -- (7.5,8.25);
+\draw [ line width=0.5pt](10.25,8) to[european resistor] (8.75,9.5);
+\draw [ line width=0.5pt](8.75,9.5) to[european resistor] (7.5,8.25);
+\node at (8.75,9.5) [circ] {};
+\draw [ line width=0.5pt](4.25,11) to[short] (8.75,11);
+\draw [ line width=0.5pt](8.75,11) to[european resistor] (8.75,9.5);
+\draw [ line width=0.5pt](4.25,11) to[sinusoidal voltage source, sources/symbol/rotate=auto] (4.25,9.25);
+\node [font=\small] at (4.5,9.25) {n};
+\node [font=\small] at (5.25,9) {$E_B$};
+\node [font=\normalsize] at (5.25,8.75) {+};
+\node [font=\normalsize] at (2.75,8.25) {+};
+\node [font=\normalsize] at (3.5,9.25) {$E_C$};
+\node [font=\normalsize] at (4,10.75) {+};
+\node [font=\normalsize] at (4.75,10.5) {$E_A$};
+\node [font=\normalsize] at (7.75,9.25) {$Z_B$};
+\node [font=\normalsize] at (9,9.5) {n};
+\node [font=\normalsize] at (10,9) {$Z_C$};
+\node [font=\normalsize] at (9.25,10.25) {$Z_A$};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $20 \textless -30\circ$
+    \item $20 \textless 30\circ$
+    \item $20 \textless -60\circ$
+    \item $20 \textless 600\circ$
+\end{enumerate}
+\item A charger supplies $100W$ at $20V$ for charging of battery of a laptop. The power devices, used in the converter inside the charger operate at a switching at a frequency of $200kHz$ which power devices is best suited for this purpose?
+\begin{enumerate}
+    \item IGBT
+    \item Thyristor
+    \item MOSFET
+    \item BJT
+\end{enumerate}
+\item A long conducting cylinder having a radius $b$ is placed along $Z$ axis. The current density is $J=J_ar^3\hat{z}$ for the region $r\textless b$ where $r$ is the distance in the radial direction. THe magnitude feild intensity $\brak{H}$ for the region inside of the conductor $\brak{i.e for r \textless b}$ is
+\begin{enumerate}
+    \item $\frac{j_a}{4}r^4$
+    \item $\frac{j_a}{3}r^3$
+    \item $\frac{j_a}{5}r^5$
+    \item $j_ar^3$
+\end{enumerate}
+\item The type of single phase induction motor, expected to have the maximum power factor during steady state running condition is 
+\begin{enumerate}
+    \item split phase \brak{resistance  start}
+    \item shaded pole 
+    \item capacitor start
+    \item capacitor start, capacitor run.
+\end{enumerate}
+\item For the circuit shown below with ideak diodes, the output will be \\\\\\\\\\\\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+
+\draw [ line width=0.5pt](2.25,10) to[D] (4.75,10);
+\draw [line width=0.5pt, short] (4.5,10) -- (6.5,10);
+\draw [ line width=0.5pt](2.25,10) to[short, -o] (2,10) ;
+\draw [ line width=0.5pt](2,8) to[D] (5,8);
+\draw [ line width=0.5pt](2,8) to[short, -o] (2,8) ;
+\draw [ line width=0.5pt](2.75,8) to[short, -o] (2,8) ;
+\draw [ line width=0.5pt](6,10) to[short, -o] (6.5,10) ;
+\draw [ line width=0.5pt](5,8) to[short, -o] (6.5,8) ;
+\draw [ line width=0.5pt](5.25,10) to[R,l={ \normalsize $R_1$}] (5.25,8);
+\draw [ line width=0.5pt](1.75,9) to[short] (3.75,9);
+\draw [line width=0.5pt, short] (3,9) .. controls (3,8.5) and (3.25,8.75) .. (3.5,8.5);
+\draw [line width=0.5pt, short] (3.5,8.5) .. controls (3.75,8.75) and (3.75,8.75) .. (3.75,9);
+\node [font=\normalsize] at (1.75,9.25) {$V_{in}$};
+\node [font=\normalsize] at (3.5,7.5) {$D_2$};
+\node [font=\normalsize] at (3.5,10.5) {$D_1$};
+\node [font=\normalsize] at (6.5,9) {$V_{out}$};
+\node [font=\normalsize] at (6.5,9.75) {$+$};
+\node [font=\normalsize] at (6.5,8.25) {$-$};
+\node [font=\normalsize] at (2,10.25) {$+$};
+\node [font=\normalsize] at (2,7.75) {$-$};
+\draw [line width=0.5pt, short] (2,9) .. controls (1.75,9.5) and (2.25,9.5) .. (2.5,9.5);
+\draw [line width=0.5pt, short] (2.5,9.5) .. controls (2.75,9.5) and (3,9.5) .. (3,9);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+\begin{enumerate}
+    \item $V{out}=V_{in}$ for $V_{in}\textgreater 0$
+    \item $V{out}=V_{in}$ for $V_{in}\textless 0$
+    \item $V{out}=-V_{in}$ for $V_{in}\textgreater 0$
+    \item $V{out}=-V_{in}$ for $V_{in}\textless 0$
+\end{enumerate}
+\item A MOD $2$ and a MOD $5$ up-counter when cascaded together results in a MOD counter
+\end{enumerate}
+\end{document}t
